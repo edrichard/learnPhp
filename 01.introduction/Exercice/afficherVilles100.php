@@ -23,5 +23,6 @@
             echo '<li>'.$ville['nom'].'</li>';
         } ?>
         </ul>
+        <p><a href="insertVille.php">Rajouter une autre ville</a></p>
     </body>
 </html>
