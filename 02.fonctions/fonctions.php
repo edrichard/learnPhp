@@ -63,10 +63,6 @@ function mozilla(){
  * Remplace une chaine de caractère dans une string
  */
 function replace($search, $replace, $subject, $nbJour){
-    $nbJour = 0;
-    $subject = "Bonjour il fait beau aujourd'hui!";
-    $search = "jour";
-    $replace = "soir";
     echo str_replace($search, $replace, $subject, $nbJour);
 }
 

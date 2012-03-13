@@ -21,7 +21,7 @@
     
     echo '<br><br>';
     
-    replace();
+    replace("jour", "soir", "Bonjour il fait beau aujourd'hui!", 0);
     
     echo '<p>'.carre(2).'</p>';
     echo '<p>'.carre(-2).'</p>';
