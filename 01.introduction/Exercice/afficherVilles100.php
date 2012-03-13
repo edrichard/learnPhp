@@ -20,7 +20,7 @@
         <p>Liste des villes : </p>
         <ul>
         <?php foreach ($villes as $ville) {
-            echo '<li>'.$ville['nom'].'</li>';
+            echo '<li>'.htmlentities($ville['nom']).'</li>';
         } ?>
         </ul>
         <p><a href="insertVille.php">Rajouter une autre ville</a></p>
