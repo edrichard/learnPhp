@@ -1,8 +1,9 @@
 <?php
     header('Content-type: text/html; charset=UTF-8');
     
-    $cp = "92000";
-    if(preg_match("/^[0-9]{5}/", $cp)){
+    $cp0 = "92000";
+    $cp1 = "5v000";
+    if(preg_match("/^[0-9]{5}/", $cp0)){
         echo '<p>Code postal valide...</p>';
     } else {
         echo '<p>Code postal invalide...</p>';
