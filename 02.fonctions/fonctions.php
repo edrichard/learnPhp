@@ -69,3 +69,58 @@ function replace($search, $replace, $subject, $nbJour){
     $replace = "soir";
     echo str_replace($search, $replace, $subject, $nbJour);
 }
+
+/**
+ * Retourne le carré d'un nombre $a
+ * @param int $a
+ * @return int 
+ */
+function carre($a){
+    return $a*$a;
+}
+
+/**
+ * Retourne la valeur absolue d'un nombre
+ * @param double $a
+ * @return double 
+ */
+function absolue($a){
+    return abs($a);
+}
+
+/**
+ * Retourne l'inverse d'une chaine de caractères (string) 
+ * @param string $mot
+ * @return string 
+ */
+function reverse($mot){
+    return strrev($mot);
+}
+
+/**
+ * Retourne le nombre délément int qu'il y a dans un tableau
+ * @param array $table
+ * @return int 
+ */
+function countArray($table){
+    $compteur = 0;
+    foreach ($table as $value) {
+        if(is_integer($value) == TRUE){
+           $compteur++; 
+        }
+    }
+    return $compteur;
+}
+
+/**
+ * Retourne le factorielle d'un nombre
+ * @param int $a
+ * @return int 
+ */
+function fact($a){
+    if($a == 0 || $a == 1){
+        return 1;
+    } else {
+        return $a * fact($a-1);
+    }
+}

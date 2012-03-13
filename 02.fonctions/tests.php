@@ -22,3 +22,17 @@
     echo '<br><br>';
     
     replace();
+    
+    echo '<p>'.carre(2).'</p>';
+    echo '<p>'.carre(-2).'</p>';
+    
+    echo '<p>'.absolue(-50).'</p>';
+    echo '<p>'.absolue(-4.6).'</p>';
+    
+    echo '<p>'.reverse("Bonjour").'</p>';
+    
+    $table = array("banane", "carrote", "pomme", "cerise", 2, 3, 5);
+    echo '<p>Le nombre d\'élément est : '.countArray($table).'</p>';
+
+    echo '<p>Le factorielle de 0 : '.fact(0).'</p>';
+    echo '<p>Le factorielle de 5 : '.fact(5).'</p>';
