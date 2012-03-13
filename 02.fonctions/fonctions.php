@@ -46,6 +46,9 @@ function hi($prenom = "Inconnu"){
     echo "<p>Bonjour $prenom</p>";
 }
 
+/**
+ * Détermine le user agent du navigateur 
+ */
 function mozilla(){
     $ua = $_SERVER['HTTP_USER_AGENT'];
     
@@ -54,4 +57,15 @@ function mozilla(){
     } else {
         echo 'Je ne suis pas mozilla';
     }
+}
+
+/**
+ * Remplace une chaine de caractère dans une string
+ */
+function replace($search, $replace, $subject, $nbJour){
+    $nbJour = 0;
+    $subject = "Bonjour il fait beau aujourd'hui!";
+    $search = "jour";
+    $replace = "soir";
+    echo str_replace($search, $replace, $subject, $nbJour);
 }
