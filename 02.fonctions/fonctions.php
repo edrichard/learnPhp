@@ -45,3 +45,13 @@ function multiplication(){
 function hi($prenom = "Inconnu"){
     echo "<p>Bonjour $prenom</p>";
 }
+
+function mozilla(){
+    $ua = $_SERVER['HTTP_USER_AGENT'];
+    
+    if(strpos($ua, 'Mozilla') !== FALSE){
+        echo 'Je suis mozilla!';
+    } else {
+        echo 'Je ne suis pas mozilla';
+    }
+}

@@ -16,3 +16,5 @@
     hi('Eddy');
     $firstname = "Fred";
     hi($firstname);
+    
+    mozilla();
