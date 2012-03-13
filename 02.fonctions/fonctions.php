@@ -24,11 +24,12 @@ function pileOuFace(){
 }
 
 /**
- * Multiplication of several numbers
- * @return int
+ * Multiplication of several numbers (double)
+ * @return double
  */
 function multiplication(){
     $nbs = func_get_args();
+    $result = 1;
     
     foreach ($nbs as $nb) {
         $result *= $nb;
