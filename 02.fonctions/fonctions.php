@@ -37,3 +37,11 @@ function multiplication(){
     
     return $result;
 }
+
+/**
+ * Affiche le prénom ($prenom) sinon affiche inconnu
+ * @param string $prenom 
+ */
+function hi($prenom = "Inconnu"){
+    echo "<p>Bonjour $prenom</p>";
+}

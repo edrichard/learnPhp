@@ -10,4 +10,9 @@
     
     echo '<p>'.multiplication(5, 6).'</p>';
     echo '<p>'.multiplication(5, 6, 10).'</p>';
-    echo '<p>'.multiplication(5, 6.3, 10).'</p>';
+    echo '<p>'.multiplication(5, 6,3).'</p>';
+    
+    hi();
+    hi('Eddy');
+    $firstname = "Fred";
+    hi($firstname);
