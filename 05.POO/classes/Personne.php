@@ -6,11 +6,21 @@
  * @author edrichard
  */
 class Personne {
-    private $prenom = "John";
-    private $nom = "Do";
+    private $prenom;
+    private $nom;
     
+    public function __construct($prenom = "John", $nom = "Doe") {
+        $this->prenom = $prenom;
+        $this->nom = $nom;
+    }
+
+
     public function direBonjour(){
-        echo "Bonjour";
+        echo "Bonjour <br/>";
+    }
+    
+    public function sePresenter(){
+        echo "Je m'appelle $this->nom $this->prenom <br/>";
     }
     
     public function getPrenom(){
