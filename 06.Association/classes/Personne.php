@@ -32,10 +32,10 @@ class Personne {
     }
 
     public function getNom(){
-        return $this->prenom;
+        return $this->nom;
     }
     
     public function setNom($nom){
-        $this->nom = "$nom";
+        $this->nom = $nom;
     }
 }

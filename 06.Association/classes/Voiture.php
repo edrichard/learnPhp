@@ -10,11 +10,13 @@ class Voiture {
     private $model;
     private $nbPlace;
     private $puissance;
+    private $proprietaire;
     
-    function __construct($marque, $model, $nbPlace) {
+    function __construct($marque, $model, $nbPlace, $puissance) {
         $this->marque = (string) $marque;
         $this->model = (string) $model;
         $this->nbPlace = (int) $nbPlace;
+        $this->puissance = (int) $puissance;
     }
 
     public function getMarque() {
@@ -53,6 +55,26 @@ class Voiture {
         $this->puissance = $puissance;
     }
     
+    public function getProprietaire() {
+        return $this->proprietaire;
+    }
+
+    public function setProprietaire(Personne $proprietaire) {
+        $this->proprietaire = $proprietaire;
+        return $this;
+    }
+    
+    public function infos(){
+        echo "Marque : $this->marque <br/>";
+        echo "Modele : $this->model <br/>";
+        echo "Nombre de place : $this->nbPlace <br/>";
+        echo "Puissance : $this->puissance <br/>";
+        if($this->proprietaire != null){
+            echo "Propriétaire : ".$this->proprietaire->getPrenom()." ".$this->proprietaire->getNom();
+        }
+    }
+
+
     public function grandeOuPetite($nbPlace) {
         if($nbPlace >= 5){
             return "Je suis une grande voiture!<br/>";
