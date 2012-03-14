@@ -8,7 +8,6 @@
 class Garage {
     private $nom;
     private $adresse;
-   
     private $voitures;
    
     function __construct($nom, $adresse) {
@@ -16,6 +15,7 @@ class Garage {
         $this->adresse = $adresse;
         $this->voitures = array();
     }
+    
     public function getNom() {
         return $this->nom;
     }
@@ -32,19 +32,16 @@ class Garage {
         $this->adresse = $adresse;
     }
 
-    public function ajouterVoiture(Voiture $v)
-    {
+    public function ajouterVoiture(Voiture $v){
         $this->voitures[]=$v;
     }
     
-    public function infos()
-    {
+    public function infos(){
         echo "Nom : ".$this->getNom()."<br/>";
         echo "Adresse : ".$this->getAdresse()."<br/>";
        
-        foreach ($this->voitures as $v)
-        {
-            echo "Voiture : ".$v->getmarque()."<br/>";
+        foreach ($this->voitures as $v){
+            echo "Voiture : ".$v->getMarque()."<br/>";
         }
     }
    
