@@ -6,13 +6,13 @@
  * @author edrichard
  */
 class Voiture {
-    private $marque;
-    private $model;
-    private $nbPlace;
-    private $puissance;
-    private $proprietaire;
+    protected $marque;
+    protected $model;
+    protected $nbPlace;
+    protected $puissance;
+    protected $proprietaire;
     
-    function __construct($marque, $model, $nbPlace, $puissance) {
+    function __construct($marque, $model, $nbPlace = 0, $puissance = 0) {
         $this->marque = (string) $marque;
         $this->model = (string) $model;
         $this->nbPlace = (int) $nbPlace;
@@ -74,6 +74,20 @@ class Voiture {
         }
     }
 
+    public function __toString() {
+        $str = "Marque : $this->marque <br/>";
+        $str .= "Modele : $this->model <br/>";
+        if($this->nbPlace != null){
+            $str .= "Nombre de place : $this->nbPlace <br/>";
+        }
+        if($this->puissance != null){
+            $str .= "Puissance : $this->puissance <br/>";
+        }
+        if($this->proprietaire != null){
+            $str .= "Propriétaire : ".$this->proprietaire->getPrenom()." ".$this->proprietaire->getNom();
+        }
+        return $str;
+    }
 
     public function grandeOuPetite($nbPlace) {
         if($nbPlace >= 5){

@@ -6,8 +6,8 @@
  * @author edrichard
  */
 class Personne {
-    private $prenom;
-    private $nom;
+    protected $prenom;
+    protected $nom;
     
     public function __construct($prenom = "John", $nom = "Doe") {
         $this->prenom = $prenom;
