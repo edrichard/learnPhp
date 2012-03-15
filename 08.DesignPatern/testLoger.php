@@ -11,4 +11,14 @@
     $log2->log("Un message !");
     $log2->log("Un autre message!");
     
+    $log3 = LoggerFactory::create("File");
+    $log3->log("Un message Factory...");
+    
+    function bidon(){
+        $log3 = LoggerFactory::create("MySQL");
+        $log3->log("Un message Factory...");
+    }
+    
+    bidon();
+    
     echo "Traitement réussit !";
