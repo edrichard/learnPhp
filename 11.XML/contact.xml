@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    <comparaison>3 &lt; 5</comparaison>
-    <comparaison><!</comparaison>
--->
-
-
-<contact numero="3" >
-    <photo src="toto.jpg" />
+<contact numero="3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="contact.xsd">
+    <photo url="toto.jpg" />
     <prenom>John</prenom>
     <nom origine="Pologne">Doe</nom>
 </contact>

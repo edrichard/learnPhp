@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
+
+    <xsd:element name="contact">
+    	<xsd:complexType>
+            <xsd:all>
+    			<xsd:element name="photo" minOccurs="0">
+    				<xsd:complexType>
+    					<xsd:attribute name="url"
+    						type="xsd:string">
+    					</xsd:attribute>
+    				</xsd:complexType>
+    			</xsd:element>
+    			
+    			<xsd:element name="prenom" type="xsd:string"></xsd:element>
+    			<xsd:element name="nom">
+    				<xsd:complexType>
+    					<xsd:simpleContent>
+    						<xsd:extension base="xsd:string">
+    							<xsd:attribute name="origine"
+    								type="xsd:string">
+    							</xsd:attribute>
+    						</xsd:extension>
+    					</xsd:simpleContent>
+    				</xsd:complexType>
+    			</xsd:element>
+            </xsd:all>
+    		<xsd:attribute name="numero" type="xsd:int"
+    			use="optional">
+    		</xsd:attribute>
+    	</xsd:complexType>
+    </xsd:element>
+    
+
+</xsd:schema>

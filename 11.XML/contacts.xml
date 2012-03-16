@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contacts>
     <contact numero="1" >
-        <photo src="john.jpg" />
+        <photo url="john.jpg" />
         <prenom>John</prenom>
         <nom origine="USA">Doe</nom>
     </contact>
@@ -14,7 +14,7 @@
         <nom>Henry</nom>
     </contact>
     <contact numero="4" >
-        <photo src="toto.jpg" />
+        <photo url="toto.jpg" />
         <prenom>Fernando</prenom>
         <nom origine="Espagnol">Alonso</nom>
     </contact>

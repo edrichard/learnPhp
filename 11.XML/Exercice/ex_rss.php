@@ -13,8 +13,10 @@
             $nbArticles = $articles->channel->item->count();
 
             for ($i=0;$i<$nbArticles;$i++){
-                $tblTitres[$i]= new Article($articles->channel->item[$i]->title, $articles->channel->item[$i]->link, 
-                $articles->channel->item[$i]->description, $articles->channel->item[$i]->pubDate);
+                $tblTitres[$i]= new Article($articles->channel->item[$i]->title, 
+                                            $articles->channel->item[$i]->link, 
+                                            $articles->channel->item[$i]->description,
+                                            $articles->channel->item[$i]->pubDate);
             }
     } else {
         $titleFlux="";
@@ -43,11 +45,10 @@
         <p><?php echo $descriptionFlux;?></p>
         <ul>
             <?php foreach ($tblTitres as $tbl) : ?>
-                <li><?php echo $tbl->getTitre();?></li>
-                <?php echo $tbl->getDescription();?>
-                <?php echo $tbl->getDate()."<br>";?>
-                <?php echo "<a href=".$tbl->getLink().">Lien</a><br><br>";?>
-            
+                <li><?php echo $tbl->getTitre(); ?></li>
+                <?php echo $tbl->getDescription(); ?>
+                <?php echo $tbl->getDate()."<br>"; ?>
+                <?php echo "<a href=".$tbl->getLink().">Lien</a><br><br>"; ?>
             <?php endforeach; ?>
         </ul> 
     </body>
