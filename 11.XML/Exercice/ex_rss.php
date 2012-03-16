@@ -6,7 +6,7 @@
     if (isset ($_POST["selectflux"])){
             $titleFlux=$_POST["selectflux"];
 
-            $articles = new SimpleXMLElement("$titleFlux.xml",null,true);
+            $articles = new SimpleXMLElement("$titleFlux",null,true);
             $descriptionFlux = $articles->channel->description;
             $titleFlux = $articles->channel->title;
 
@@ -32,9 +32,9 @@
         
         <form action="" method="POST">
             <select name="selectflux">
-                <option>YahooWeather</option>
-                <option>lemonde</option>
-                <option>http://www.lequipe.fr/rss/actu_rss_Formule1</option>
+                <option value="YahooWeather.xml">Yahoo Weather</option>
+                <option value="lemonde.xml">Le monde</option>
+                <option value="http://www.lequipe.fr/rss/actu_rss_Formule1.xml">L'équipe : Formule 1</option>
             </select>
             <input type="submit" value="valider">
         </form>
