@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+    <contact numero="1" >
+        <photo src="john.jpg" />
+        <prenom>John</prenom>
+        <nom origine="USA">Doe</nom>
+    </contact>
+    <contact numero="2" >
+        <prenom>Barack</prenom>
+        <nom origine="Hawaï">Obama</nom>
+    </contact>
+    <contact numero="3" >
+        <prenom>Titi</prenom>
+        <nom>Henry</nom>
+    </contact>
+    <contact numero="4" >
+        <photo src="toto.jpg" />
+        <prenom>Fernando</prenom>
+        <nom origine="Espagnol">Alonso</nom>
+    </contact>
+</contacts>
