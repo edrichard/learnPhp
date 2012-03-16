@@ -2,7 +2,7 @@
 if (isset($_POST['firstname'])) {
     $prenom=$_POST['firstname'];
    
-    $dns = "mysql:host=localhost;dbname=formation;charset=UTF8";
+    $dns = "mysql:host=localhost;dbname=formation;charset=UTF-8";
     try{
         $pdo = new PDO($dns, "root", "alonso");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
