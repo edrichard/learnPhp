@@ -28,6 +28,7 @@
                     'cancelImg' : 'uploadify/cancel.png',
                     'folder'    : 'uploads/',
                     'buttonText':  'Parcourir',
+                    'fileExt'   : '*.jpg;*.gif;*.png',
                     'multi'     : true,
                     'auto'      : false
                 });

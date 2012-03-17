@@ -30,11 +30,14 @@ if (!empty($_FILES)) {
 	$tempFile = $_FILES['Filedata']['tmp_name'];
 	$targetPath = $_SERVER['DOCUMENT_ROOT'] . $_REQUEST['folder'] . '/';
 	$targetFile =  str_replace('//','/',$targetPath) . $_FILES['Filedata']['name'];
-	
-        $targetFile2 =  $_FILES['Filedata']['name'];
-        $sql="INSERT INTO fichiers (fichier) VALUES('$targetFile2')";
-        $succes = mysqli_query($link, $sql);
         
 	move_uploaded_file($tempFile,$targetFile);
+       
+        $targetFile2 =  $_FILES['Filedata']['name'];
+        list($width, $height) = getimagesize($targetFile);
+        
+        $sql="INSERT INTO fichiers (fichier, hauteur, largeur) VALUES('$targetFile2', '$height', '$width')";
+        mysqli_query($link, $sql);
+        
 	echo str_replace($_SERVER['DOCUMENT_ROOT'],'',$targetFile);
 }
