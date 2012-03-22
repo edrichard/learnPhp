@@ -1,0 +1,16 @@
+
+/* ressources CSS lourdes uniquement */
+@media (min-width : 641px) {
+    body {
+        background: green;
+    }
+}
+
+/* styles pour petits écrans */
+@media (max-width : 640px) {
+    body {
+        width: auto;
+        background: red;
+    }
+}
+

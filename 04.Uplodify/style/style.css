@@ -1,0 +1,49 @@
+/* 
+    Document   : style
+    Created on : 17 mars 2012, 13:51:11
+    Author     : edrichard
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body{
+    background: #fff; 
+    border: solid 1px; 
+    -moz-border-radius: 15px;
+}
+
+html{
+    background: #000;
+    width: 800px;
+    margin: 0 auto;
+}
+
+header{
+    text-align: center;
+}
+
+nav{
+    float: right; 
+    margin-right: 25px;
+}
+
+a, a:link, a:focus, a:visited, a:active{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    text-decoration: none;
+    color: navy;
+}
+
+.noData{
+    text-align: center;
+}
+
+footer{
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+}
