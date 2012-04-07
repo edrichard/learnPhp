@@ -10,5 +10,8 @@ $xml = new SimpleXMLElement($content);
 //echo '<pre>'.print_r($xml,1).'</pre>';
 
 foreach ($xml->Cube->Cube->Cube as $value) {
-    echo $value['currency']." : ".$value['rate']."<br/>";
+    //echo $value['currency']." : ".$value['rate']."<br/>";
+    if($value['currency'] == 'AUD'){
+        echo $value['currency']." : ".$value['rate']."<br/>";
+    } 
 }
