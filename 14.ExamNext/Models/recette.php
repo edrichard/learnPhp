@@ -6,28 +6,33 @@ function getRecetteByIdRecette($id)
 {
     //$id = mysql_real_escape_string($id);
     $connect = dbconnect();
+    
     $recettes_req = mysql_query('SELECT * FROM recette WHERE idRecette='.$id);
-    $recettes=array();
-    while ($row = mysql_fetch_assoc($recettes_req))
-    {
-        $recettes[]=$row;
+    
+    $recettes = array();
+    while ($row = mysql_fetch_assoc($recettes_req)){
+        $recettes[] = $row;
     }
-    //dbclose($connect);
+
     return $recettes;
 }
+
  function getImageByIdRecette($id)
 {
     //$id = mysql_real_escape_string($id);
     $connect = dbconnect();
+    
     $images_req = mysql_query('SELECT * FROM image WHERE Recette_idRecette='.$id);
-    $images=array();
+    
+    $images = array();
     while ($row = mysql_fetch_assoc($images_req))
     {
-        $images[]=$row;
+        $images[] = $row;
     }
-    //dbclose($connect);
+
     return $images;
 }
+
  function getIngredientByIdRecette($id)
 {
     $id = mysql_real_escape_string($id);
@@ -37,17 +42,11 @@ function getRecetteByIdRecette($id)
 
     $ingredients_req = mysql_query($req);
     
-    $ingredients=array();
-    while ($row = mysql_fetch_assoc($ingredients_req))
-    {
-        $ingredients[]=$row;
+    $ingredients = array();
+    while ($row = mysql_fetch_assoc($ingredients_req)){
+        $ingredients[] = $row;
         
     }
     
     return $ingredients;
-     
-  
 }
- 
- 
-?>

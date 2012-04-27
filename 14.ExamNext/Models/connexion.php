@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 function dbconnect()
 {
     static $connect = null;
@@ -14,8 +9,8 @@ function dbconnect()
     }
     return $connect;
 }
+
 function dbclose($connect)
 {
     mysql_close($connect);
 }
-?>

@@ -35,6 +35,10 @@
     text-align: left;
 }
 
+.detail {
+    padding-top: 20px;
+}
+
 .separator{
     clear: both;
 }

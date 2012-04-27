@@ -1,30 +1,17 @@
 
-
 <?php
-
-//test
 
 require_once 'Models/ingredient.php';
 
-$title = "Ingredient";
+$title = "Ingredients";
 
-
-if (isset($_GET['id']))
-{
+if (isset($_GET['id'])){
     $idIngredient = $_GET['id'];
-}
-else
-{
+} else {
     $idIngredient = 1;
 }
-
 
 $recettes = getRecetteByIdIngredient($idIngredient);
 $ingredients = getAllIngredient();
 
-
 require_once 'Views/ingredient.php';
-
-
-
-?> 

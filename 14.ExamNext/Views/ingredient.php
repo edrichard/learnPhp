@@ -20,11 +20,17 @@
         
          <div class="span6">
              
-            <h2>Ingredient : <?php echo $ingredients[$recettes[0]['idIngredient']-1]['nomIngredient']; ?></h2>
-            <img src="Images/<?php echo $ingredients[$recettes[0]['idIngredient']-1]['nomImage']; ?>" height=200/>
+            <h2>Ingredient : <?php echo htmlentities($ingredients[$recettes[0]['idIngredient']-1]['nomIngredient']); ?></h2>
+            
+            <a href="Images/<?php echo $ingredients[$recettes[0]['idIngredient']-1]['nomImage']; ?>" rel="shadowbox">
+                <img src="Images/<?php echo $ingredients[$recettes[0]['idIngredient']-1]['nomImage']; ?>" height="200" class="cakethumbnail"  />
+            </a>
+            
+            <h5 class="tabText detail">Liste des recettes associé à l'ingrédient : </h5>
+            
             <ul>
                 <?php foreach ($recettes AS $recette) { ?>
-                <li>
+                <li class="tabText">
                     <a href="recette.php?id=<?php echo htmlentities($recette['idRecette']); ?>">
                         <?php echo htmlentities($recette['titre']); ?>
                     </a>

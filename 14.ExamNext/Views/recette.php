@@ -1,4 +1,5 @@
 <?php ob_start() ?>
+
 <h1><?php echo $title ?></h1>   
 
 <div class="recettenotice">
@@ -21,12 +22,9 @@
 <a href="Images/<?php echo $image['nom']?>" rel="shadowbox[Vacation]">
     <img src="Images/<?php echo $image['nom']?>" class="cakethumbnail" height="150" />
 </a>
-<?php }  ?>
+<?php } ?>
     
 <?php $content = ob_get_clean() ?>
 
 <?php include 'layout.php' ?>
-
-            
-            
-      
+     
