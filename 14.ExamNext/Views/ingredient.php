@@ -7,7 +7,7 @@
              
             <h2>Liste des Ingredients</h2>
             <ul class="nav nav-pills nav-stacked">
-                <?php foreach ($ingredients AS $ingredient) { ?>
+                <?php foreach ($ingredientstri AS $ingredient) { ?>
                 <li class="<?php if ($ingredient['idIngredient'] ==  $idIngredient) echo 'active' ?> tabText">
                     <a href="ingredient.php?id=<?php echo $ingredient['idIngredient']; ?>">
                         <?php echo htmlentities($ingredient['nomIngredient']); ?>

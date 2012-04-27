@@ -13,5 +13,6 @@ if (isset($_GET['id'])){
 
 $recettes = getRecetteByIdIngredient($idIngredient);
 $ingredients = getAllIngredient();
+$ingredientstri=getAllIngredienttri();
 
 require_once 'Views/ingredient.php';

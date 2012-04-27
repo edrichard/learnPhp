@@ -5,7 +5,7 @@ function getAllIngredient()
 {
     $connect = dbconnect();
     
-    $ingredient_req = mysql_query("SELECT titre,image.nom as nomImage,idIngredient,ingredient.nom as nomIngredient FROM ingredient,image where idIngredient=ingredient_idingredient ORDER BY idIngredient");
+    $ingredient_req = mysql_query("SELECT titre,image.nom as nomImage,idIngredient,ingredient.nom as nomIngredient FROM ingredient,image where idIngredient=ingredient_idingredient ORDER BY idIngredient ");
     
     $ingredients = array();
     while ($row = mysql_fetch_assoc($ingredient_req)){
@@ -13,6 +13,20 @@ function getAllIngredient()
     }
     
     return $ingredients;
+}
+
+function getAllIngredienttri()
+{
+    $connect = dbconnect();
+    
+    $ingredient_req = mysql_query("SELECT titre,image.nom as nomImage,idIngredient,ingredient.nom as nomIngredient FROM ingredient,image where idIngredient=ingredient_idingredient ORDER BY ingredient.nom ");
+    
+    $ingredientstri = array();
+    while ($row = mysql_fetch_assoc($ingredient_req)){
+        $ingredientstri[] = $row;
+    }
+    
+    return $ingredientstri;
 }
 
 function getRecetteByIdIngredient($id)
