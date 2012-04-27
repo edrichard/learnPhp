@@ -7,6 +7,26 @@
     margin-bottom: 18px;
 }
 
+.recette{
+    margin: 15px auto;
+    width: 450px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    padding: 4px;
+}
+
+.recetteTitre{
+    float: left;
+    width: 200px;
+    margin-top: 87px;
+    margin-left: 50px;
+}
+
+.recettePhoto {
+    float: left;
+}
+
 .description {
     text-align: justify;
 }
