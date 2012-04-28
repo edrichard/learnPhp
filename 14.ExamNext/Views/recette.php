@@ -4,7 +4,9 @@
 
 <div class="recettenotice">
     <p>Durée de la préparation : <?php echo utf8_decode($recette[0]['dureePrepa'])?></p>
-    <p>Durée de la Cuisson : <?php echo utf8_decode($recette[0]['dureeCuisson'])?></p>
+    <?php if (isset ($recette[0]['dureeCuisson'])){ ?>
+        <p>Durée de la Cuisson (en minutes): <?php echo utf8_decode($recette[0]['dureeCuisson']); ?></p>
+    <?php } ?>
     <p>Nombre de personne : <?php echo utf8_decode($recette[0]['nbPersonne'])?></p>
 </div>
 
